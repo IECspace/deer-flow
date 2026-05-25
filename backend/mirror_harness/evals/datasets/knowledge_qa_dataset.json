@@ -1,0 +1,580 @@
+[
+  {
+    "id": "qa-001",
+    "category": "approval",
+    "question": "哪个 service 在做回放审批",
+    "expected_paths": [
+      "portal/biz/service/hybrid_service/approve_replay.go",
+      "portal/biz/service/replay_service"
+    ],
+    "required_keywords": ["portal", "审批", "回放"],
+    "optional_keywords": ["replay_service", "approve_replay"],
+    "expected_tags": ["replay", "portal", "biz"]
+  },
+  {
+    "id": "qa-002",
+    "category": "frontend",
+    "question": "录制审批前端弹窗在哪个页面组件",
+    "expected_paths": [
+      "pilot_web/src/pages/recording/components/ApprovalModal.tsx"
+    ],
+    "required_keywords": ["recording", "ApprovalModal"],
+    "optional_keywords": ["pilot_web", "审批"],
+    "expected_tags": ["record", "pilot-web"]
+  },
+  {
+    "id": "qa-003",
+    "category": "frontend",
+    "question": "回放审批前端弹窗在哪个页面组件",
+    "expected_paths": [
+      "pilot_web/src/pages/replay/components/ApprovalModal.tsx"
+    ],
+    "required_keywords": ["replay", "ApprovalModal"],
+    "optional_keywords": ["pilot_web", "审批"],
+    "expected_tags": ["replay", "pilot-web"]
+  },
+  {
+    "id": "qa-004",
+    "category": "service",
+    "question": "mock 相关后端 service 主要在哪",
+    "expected_paths": [
+      "portal/biz/service/mock_service"
+    ],
+    "required_keywords": ["mock", "portal"],
+    "optional_keywords": ["service", "mock_service"],
+    "expected_tags": ["mock", "portal"]
+  },
+  {
+    "id": "qa-005",
+    "category": "api",
+    "question": "diff 接口前端定义在哪",
+    "expected_paths": [
+      "pilot_web/src/apis/diff.ts"
+    ],
+    "required_keywords": ["diff", "pilot_web"],
+    "optional_keywords": ["api", "接口"],
+    "expected_tags": ["diff", "pilot-web"]
+  },
+  {
+    "id": "qa-006",
+    "category": "service",
+    "question": "record 相关后端 service 主要在哪",
+    "expected_paths": [
+      "portal/biz/service/record_service"
+    ],
+    "required_keywords": ["record", "portal"],
+    "optional_keywords": ["record_service", "service"],
+    "expected_tags": ["record", "portal"]
+  },
+  {
+    "id": "qa-007",
+    "category": "service",
+    "question": "replay 相关后端 service 主要在哪",
+    "expected_paths": [
+      "portal/biz/service/replay_service"
+    ],
+    "required_keywords": ["replay", "portal"],
+    "optional_keywords": ["replay_service", "service"],
+    "expected_tags": ["replay", "portal"]
+  },
+  {
+    "id": "qa-008",
+    "category": "service",
+    "question": "worker 管理相关 service 在哪",
+    "expected_paths": [
+      "portal/biz/service/worker_service"
+    ],
+    "required_keywords": ["worker", "portal"],
+    "optional_keywords": ["list_worker", "service"],
+    "expected_tags": ["worker", "portal"]
+  },
+  {
+    "id": "qa-009",
+    "category": "service",
+    "question": "agent 管理相关 service 在哪",
+    "expected_paths": [
+      "portal/biz/service/agent_service"
+    ],
+    "required_keywords": ["agent", "portal"],
+    "optional_keywords": ["list_agent", "service"],
+    "expected_tags": ["agent", "portal"]
+  },
+  {
+    "id": "qa-010",
+    "category": "service",
+    "question": "业务和环境管理 service 在哪",
+    "expected_paths": [
+      "portal/biz/service/biz_service/list_biz.go",
+      "portal/biz/service/biz_service/list_biz_env.go"
+    ],
+    "required_keywords": ["biz", "env"],
+    "optional_keywords": ["list_biz", "list_biz_env"],
+    "expected_tags": ["biz", "portal"]
+  },
+  {
+    "id": "qa-011",
+    "category": "api",
+    "question": "recording 页面调用接口定义在哪",
+    "expected_paths": [
+      "pilot_web/src/apis/recording.ts"
+    ],
+    "required_keywords": ["recording", "api"],
+    "optional_keywords": ["pilot_web", "接口"],
+    "expected_tags": ["record", "pilot-web"]
+  },
+  {
+    "id": "qa-012",
+    "category": "api",
+    "question": "replay 页面调用接口定义在哪",
+    "expected_paths": [
+      "pilot_web/src/apis/replay.ts"
+    ],
+    "required_keywords": ["replay", "api"],
+    "optional_keywords": ["pilot_web", "接口"],
+    "expected_tags": ["replay", "pilot-web"]
+  },
+  {
+    "id": "qa-013",
+    "category": "api",
+    "question": "mock 页面调用接口定义在哪",
+    "expected_paths": [
+      "pilot_web/src/apis/mock.ts"
+    ],
+    "required_keywords": ["mock", "api"],
+    "optional_keywords": ["pilot_web", "接口"],
+    "expected_tags": ["mock", "pilot-web"]
+  },
+  {
+    "id": "qa-014",
+    "category": "airtest",
+    "question": "airtest agent 注册逻辑在哪",
+    "expected_paths": [
+      "airtest-agent/service/agent/register.go"
+    ],
+    "required_keywords": ["airtest", "agent", "register"],
+    "optional_keywords": ["ui-airtest-agent", "pilot"],
+    "expected_tags": ["airtest", "agent", "biz"]
+  },
+  {
+    "id": "qa-015",
+    "category": "airtest",
+    "question": "airtest 执行调度逻辑在哪",
+    "expected_paths": [
+      "airtest-agent/service/airtest/schedule.go",
+      "airtest-agent/service/airtest/runner.go"
+    ],
+    "required_keywords": ["airtest", "schedule"],
+    "optional_keywords": ["runner", "执行"],
+    "expected_tags": ["airtest", "agent"]
+  },
+  {
+    "id": "qa-016",
+    "category": "runtime",
+    "question": "流量录制执行器入口在哪",
+    "expected_paths": [
+      "recorder/service/record/handler.go"
+    ],
+    "required_keywords": ["recorder", "record"],
+    "optional_keywords": ["handler", "录制"],
+    "expected_tags": ["record"]
+  },
+  {
+    "id": "qa-017",
+    "category": "runtime",
+    "question": "流量回放执行器入口在哪",
+    "expected_paths": [
+      "replayer/service/replay/handler.go"
+    ],
+    "required_keywords": ["replayer", "replay"],
+    "optional_keywords": ["handler", "回放"],
+    "expected_tags": ["replay"]
+  },
+  {
+    "id": "qa-018",
+    "category": "handler",
+    "question": "diff 后端 handler 在哪",
+    "expected_paths": [
+      "portal/biz/handler/diffy/diffy_service.go"
+    ],
+    "required_keywords": ["diff", "handler"],
+    "optional_keywords": ["diffy", "portal"],
+    "expected_tags": ["diff", "portal"]
+  },
+  {
+    "id": "qa-019",
+    "category": "handler",
+    "question": "record 后端 handler 在哪",
+    "expected_paths": [
+      "portal/biz/handler/record/record_service.go"
+    ],
+    "required_keywords": ["record", "handler"],
+    "optional_keywords": ["portal", "record_service"],
+    "expected_tags": ["record", "portal"]
+  },
+  {
+    "id": "qa-020",
+    "category": "handler",
+    "question": "replay 后端 handler 在哪",
+    "expected_paths": [
+      "portal/biz/handler/replay/replay_service.go"
+    ],
+    "required_keywords": ["replay", "handler"],
+    "optional_keywords": ["portal", "replay_service"],
+    "expected_tags": ["replay", "portal"]
+  },
+  {
+    "id": "qa-021",
+    "category": "architecture",
+    "question": "record replay mock diff 在 mirrorsphere 里怎么串起来",
+    "expected_paths": [
+      "harness/docs/architecture.md"
+    ],
+    "required_keywords": ["record", "replay", "mock", "diff"],
+    "optional_keywords": ["portal", "pilot_web", "workflow"],
+    "expected_tags": ["record", "replay", "diff"]
+  },
+  {
+    "id": "qa-022",
+    "category": "docs",
+    "question": "Mirrorsphere AI 扩展架构文档在哪",
+    "expected_paths": [
+      "harness/docs/architecture.md"
+    ],
+    "required_keywords": ["architecture", "harness"],
+    "optional_keywords": ["DeerFlow", "AI"],
+    "expected_tags": []
+  },
+  {
+    "id": "qa-023",
+    "category": "docs",
+    "question": "Harness 项目路线图在哪",
+    "expected_paths": [
+      "harness/docs/roadmap.md"
+    ],
+    "required_keywords": ["roadmap", "harness"],
+    "optional_keywords": ["phase", "阶段"],
+    "expected_tags": []
+  },
+  {
+    "id": "qa-024-overview",
+    "category": "overview",
+    "question": "mirrorsphere是什么",
+    "expected_paths": [
+      "harness/docs/overview.md",
+      "harness/README.md"
+    ],
+    "required_keywords": ["Mirrorsphere", "平台"],
+    "required_any_keywords": [
+      ["流量录制", "record"],
+      ["流量回放", "replay"],
+      ["Mock", "mock"],
+      ["Diff", "diff"],
+      ["harness", "DeerFlow"]
+    ],
+    "optional_keywords": ["portal", "pilot_web", "UI 自动化"],
+    "expected_tags": [],
+    "forbidden_keywords": ["成立于2007年", "公司历史", "外部产品"],
+    "pass_threshold": 0.7
+  },
+  {
+    "id": "qa-024",
+    "category": "page-api-trace",
+    "question": "回放页面相关前端代码应该先看哪里",
+    "expected_paths": [
+      "pilot_web/src/pages/replay",
+      "pilot_web/src/apis/replay.ts"
+    ],
+    "required_keywords": ["pilot_web", "replay"],
+    "optional_keywords": ["pages", "apis", "页面"],
+    "expected_tags": ["replay", "pilot-web"]
+  },
+  {
+    "id": "qa-025",
+    "category": "ambiguous",
+    "question": "我想改审批，先看哪",
+    "expected_paths": [
+      "portal/biz/service/hybrid_service/approve_record.go",
+      "portal/biz/service/hybrid_service/approve_replay.go"
+    ],
+    "required_keywords": ["portal", "审批"],
+    "optional_keywords": ["approve_record", "approve_replay", "pilot_web"],
+    "expected_tags": ["portal", "biz"]
+  },
+  {
+    "id": "qa-026",
+    "category": "ambiguous",
+    "question": "我想接入 mirrorsphere，该从哪几个模块开始",
+    "expected_paths": [],
+    "required_keywords": ["portal", "pilot_web"],
+    "optional_keywords": ["recorder", "replayer", "airtest-agent"],
+    "expected_tags": [],
+    "pass_threshold": 0.65
+  },
+  {
+    "id": "qa-027",
+    "category": "ambiguous",
+    "question": "有 UI 自动化能力吗",
+    "expected_paths": [],
+    "required_keywords": ["UI 自动化", "airtest-agent"],
+    "optional_keywords": ["ui_airtest", "Mirrorsphere 具备"],
+    "expected_tags": [],
+    "pass_threshold": 0.65
+  },
+  {
+    "id": "qa-028",
+    "category": "ambiguous",
+    "question": "想查回放失败先看哪几层",
+    "expected_paths": [],
+    "required_keywords": ["portal", "replayer"],
+    "optional_keywords": ["replay_service", "handler", "回放"],
+    "expected_tags": ["replay"],
+    "pass_threshold": 0.65
+  },
+  {
+    "id": "qa-029",
+    "category": "negative",
+    "question": "Mirrorsphere 支持 kafka 压测注入模块吗",
+    "expected_paths": [],
+    "required_keywords": [],
+    "required_any_keywords": [
+      ["当前没有检索到", "当前知识库里没有检索到"],
+      ["需要继续确认", "不建议直接下结论为“支持”"]
+    ],
+    "optional_keywords": ["portal", "强证据"],
+    "expected_tags": [],
+    "forbidden_keywords": ["已经内置", "支持该能力", "Mirrorsphere 具备 UI 自动化能力"],
+    "pass_threshold": 0.6
+  },
+  {
+    "id": "qa-030",
+    "category": "negative",
+    "question": "Mirrorsphere 内置 iOS 原生录屏分析模块吗",
+    "expected_paths": [],
+    "required_keywords": [],
+    "required_any_keywords": [
+      ["当前没有检索到", "当前知识库里没有检索到"],
+      ["强证据", "不建议直接下结论为“支持”"]
+    ],
+    "optional_keywords": ["需要继续确认"],
+    "expected_tags": [],
+    "forbidden_keywords": ["已经内置", "支持该能力"],
+    "pass_threshold": 0.6
+  },
+  {
+    "id": "qa-031",
+    "category": "ambiguous",
+    "question": "mock 和回放我该先看哪个模块",
+    "expected_paths": [],
+    "required_keywords": ["mock", "回放"],
+    "optional_keywords": ["replay_service", "mock_service"],
+    "expected_tags": ["mock", "replay"],
+    "pass_threshold": 0.65
+  },
+  {
+    "id": "qa-032",
+    "category": "ambiguous",
+    "question": "想看录制链路，先从前端还是后端开始",
+    "expected_paths": [
+      "pilot_web/src/apis/recording.ts"
+    ],
+    "required_keywords": ["pilot_web", "portal"],
+    "optional_keywords": ["前端", "后端", "record_service"],
+    "expected_tags": ["record", "pilot-web"],
+    "pass_threshold": 0.65
+  },
+  {
+    "id": "qa-033",
+    "category": "ambiguous",
+    "question": "我想定位回放审批前后端链路，先看哪些文件",
+    "expected_paths": [],
+    "required_keywords": ["pilot_web", "portal"],
+    "required_any_keywords": [
+      ["ApprovalModal", "approve_replay"],
+      ["审批", "replay"]
+    ],
+    "optional_keywords": ["前后端", "链路"],
+    "expected_tags": ["replay", "portal"],
+    "pass_threshold": 0.65
+  },
+  {
+    "id": "qa-034",
+    "category": "ambiguous",
+    "question": "排查录制问题一般从哪几层看",
+    "expected_paths": [],
+    "required_keywords": ["recorder", "portal"],
+    "required_any_keywords": [
+      ["handler", "record_service"],
+      ["录制", "record"]
+    ],
+    "optional_keywords": ["pilot_web", "service"],
+    "expected_tags": ["record"],
+    "pass_threshold": 0.65
+  },
+  {
+    "id": "qa-035",
+    "category": "ambiguous",
+    "question": "想看 worker 状态管理，要先找前端还是后端",
+    "expected_paths": [
+      "portal/biz/service/worker_service",
+      "pilot_web/src/pages/worker"
+    ],
+    "required_keywords": ["worker", "portal"],
+    "required_any_keywords": [
+      ["pilot_web", "前端"],
+      ["后端", "service"]
+    ],
+    "optional_keywords": ["list_worker", "页面"],
+    "expected_tags": ["worker", "portal"],
+    "pass_threshold": 0.65
+  },
+  {
+    "id": "qa-036",
+    "category": "ambiguous",
+    "question": "我想改回放页面的提交逻辑，通常会动哪几层",
+    "expected_paths": [
+      "pilot_web/src/apis/replay.ts",
+      "portal/biz/service/replay_service"
+    ],
+    "required_keywords": ["pilot_web", "portal"],
+    "required_any_keywords": [
+      ["replay", "回放"],
+      ["页面", "接口"]
+    ],
+    "optional_keywords": ["service", "handler"],
+    "expected_tags": ["replay", "pilot-web", "portal"],
+    "pass_threshold": 0.65
+  },
+  {
+    "id": "qa-037",
+    "category": "ambiguous",
+    "question": "新人要看 mock 能力，第一站看哪",
+    "expected_paths": [],
+    "required_keywords": ["pilot_web", "portal"],
+    "required_any_keywords": [
+      ["mock_service", "src/pages/mock"],
+      ["mock", "能力"]
+    ],
+    "optional_keywords": ["Mock", "页面"],
+    "expected_tags": ["mock"],
+    "pass_threshold": 0.65
+  },
+  {
+    "id": "qa-038",
+    "category": "ambiguous",
+    "question": "审批这块前端和后端分别在哪",
+    "expected_paths": [],
+    "required_keywords": ["pilot_web", "portal"],
+    "required_any_keywords": [
+      ["ApprovalModal", "approve_record"],
+      ["approve_replay", "审批"]
+    ],
+    "optional_keywords": ["前端", "后端"],
+    "expected_tags": ["portal", "biz"],
+    "pass_threshold": 0.65
+  },
+  {
+    "id": "qa-039",
+    "category": "negative",
+    "question": "Mirrorsphere 自带浏览器插件录制能力吗",
+    "expected_paths": [],
+    "required_keywords": [],
+    "required_any_keywords": [
+      ["当前没有检索到", "当前知识库里没有检索到"],
+      ["不建议直接下结论为“支持”", "需要继续确认"]
+    ],
+    "optional_keywords": ["强证据"],
+    "expected_tags": [],
+    "forbidden_keywords": ["已经内置", "支持该能力"],
+    "pass_threshold": 0.6
+  },
+  {
+    "id": "qa-040",
+    "category": "negative",
+    "question": "Mirrorsphere 现在有自动生成 PRD 脑图的内置页面吗",
+    "expected_paths": [],
+    "required_keywords": [],
+    "required_any_keywords": [
+      ["当前没有检索到", "当前知识库里没有检索到"],
+      ["不建议直接下结论为“支持”", "需要继续确认"]
+    ],
+    "optional_keywords": ["强证据", "产品文档"],
+    "expected_tags": [],
+    "forbidden_keywords": ["已经内置", "内置页面", "支持该能力"],
+    "pass_threshold": 0.6
+  },
+  {
+    "id": "qa-041",
+    "category": "negative",
+    "question": "是不是支持 Android monkey 稳定性测试",
+    "expected_paths": [],
+    "required_keywords": [],
+    "required_any_keywords": [
+      ["当前没有检索到", "当前知识库里没有检索到"],
+      ["不建议直接下结论为“支持”", "需要继续确认"]
+    ],
+    "optional_keywords": ["强证据"],
+    "expected_tags": [],
+    "forbidden_keywords": ["已经内置", "支持该能力"],
+    "pass_threshold": 0.6
+  },
+  {
+    "id": "qa-042",
+    "category": "negative",
+    "question": "平台里有独立的 Kubernetes operator 管理回放任务吗",
+    "expected_paths": [],
+    "required_keywords": [],
+    "required_any_keywords": [
+      ["当前没有检索到", "当前知识库里没有检索到"],
+      ["不建议直接下结论为“支持”", "需要继续确认"]
+    ],
+    "optional_keywords": ["强证据", "产品文档"],
+    "expected_tags": [],
+    "forbidden_keywords": ["已经内置", "支持该能力", "operator"],
+    "pass_threshold": 0.6
+  },
+  {
+    "id": "qa-043",
+    "category": "negative",
+    "question": "有没有直接的 Chrome DevTools 抓包模块",
+    "expected_paths": [],
+    "required_keywords": [],
+    "required_any_keywords": [
+      ["当前没有检索到", "当前知识库里没有检索到"],
+      ["不建议直接下结论为“支持”", "需要继续确认"]
+    ],
+    "optional_keywords": ["强证据"],
+    "expected_tags": [],
+    "forbidden_keywords": ["已经内置", "支持该能力"],
+    "pass_threshold": 0.6
+  },
+  {
+    "id": "qa-044",
+    "category": "negative",
+    "question": "Mirrorsphere 已经集成 AI 自动修复脚本了吗",
+    "expected_paths": [],
+    "required_keywords": [],
+    "required_any_keywords": [
+      ["当前没有检索到", "当前知识库里没有检索到"],
+      ["不建议直接下结论为“支持”", "需要继续确认"]
+    ],
+    "optional_keywords": ["强证据"],
+    "expected_tags": [],
+    "forbidden_keywords": ["已经内置", "支持该能力"],
+    "pass_threshold": 0.6
+  },
+  {
+    "id": "qa-045",
+    "category": "negative",
+    "question": "Mirrorsphere 成立于哪一年",
+    "expected_paths": [],
+    "required_keywords": [],
+    "required_any_keywords": [
+      ["当前内部知识库没有检索到直接证据", "当前知识库里没有检索到"],
+      ["不会补充外部世界知识", "不建议直接下结论"]
+    ],
+    "optional_keywords": ["内部知识库", "仓库文件"],
+    "expected_tags": [],
+    "forbidden_keywords": ["成立于2007年", "成立于", "创立于", "公司历史"],
+    "pass_threshold": 0.6
+  }
+]
